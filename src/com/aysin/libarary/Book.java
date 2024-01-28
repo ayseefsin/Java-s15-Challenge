@@ -12,6 +12,7 @@ public abstract class Book {
     private Status status;
     private int edition;
     private LocalDate dateOfPurchase;
+    private String owner;
 
     public Book(int bookId, String author, String name, double price, Status status, int edition) {
         this.bookId = bookId;
@@ -77,7 +78,18 @@ public abstract class Book {
     public void setDateOfPurchase(LocalDate dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
     }
-
+    public String getOwner(){
+        return this.owner;
+    }
+    public void changeOwner(String owner){
+        this.owner=owner;
+    }
+    public Book display(){
+        return this;
+    }
+    public void updateStatus(Status newStatus){
+        this.status= newStatus;
+    }
     @Override
     public String toString() {
         return "Book{" +
