@@ -8,7 +8,7 @@ private Books books;
 private String whoIam;
 
 
-    public Author(String name, Books books, String woIam) {
+    public Author(String name, Books books, String whoIam) {
         super(name);
         this.books = books;
         this.whoIam = whoIam;
@@ -23,7 +23,7 @@ private String whoIam;
     public String toString() {
         return "Author{" +
                 "books=" + books +
-                ", woIam='" + whoIam + '\'' +
+                ", whoIam='" + whoIam + '\'' +
                 '}';
     }
 }
