@@ -65,6 +65,7 @@ public class Reader extends Person implements ShowBook {
     public void returnBook(Book book){
         if(this.booksReader.contains(book)){
             this.booksReader.remove(book);
+            books.add(book);
             System.out.println("You returned the book " + book.getName()+" successfully");
             book.getAuthor().newBook(book);
             book.changeOwner(null);

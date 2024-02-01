@@ -12,7 +12,7 @@ public class Main {
         System.out.println("*********************************************");
         Author ataturk = new Author("Kemal Atatürk", new ArrayList<>(),"author");
         Book nutuk = new Romans(7,ataturk,"Nutuk",99.95,Status.NEW,21,LocalDate.of(2024,1,15));
-        Book geometri = new Science(23,ataturk,"Kemal Atatürk",49.90,Status.OVERUSED,32);
+        Book geometri = new Science(23,ataturk,"Geometri",49.90,Status.OVERUSED,32);
         Library.books.add(nutuk);
         System.out.println("Library's books: " + Library.books);
         Author dostoyevski = new Author("Dostoyevski", new ArrayList<>(), "Author");
@@ -32,6 +32,8 @@ public class Main {
         aysin.purchaseBook(geometri);
         aysin.borrowBook(geometri);
         aysin.returnBook(geometri);
+        aysin.borrowBook(geometri);
+        aysin.purchaseBook(geometri);
 
     }
 }
