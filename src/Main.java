@@ -24,7 +24,7 @@ public class Main {
         Reader aysin = new Reader("aysin", new ArrayList<>(), "Reader");
         crimeAndPunishment.setPrice(100);
         System.out.println("Crime and Punishment price updateeed" +crimeAndPunishment.display());
-        Book economics
+
 
     }
 }
