@@ -3,7 +3,7 @@ package com.aysin.libarary;
 import com.aysin.libarary.enums.Status;
 
 public class Magazines extends Book{
-    public Magazines(int bookId, String author, String name, double price, Status status, int edition) {
+    public Magazines(int bookId, Author author, String name, double price, Status status, int edition) {
         super(bookId, author, name, price, status, edition);
     }
 

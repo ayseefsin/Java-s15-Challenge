@@ -3,24 +3,37 @@ package com.aysin.libarary;
 import com.aysin.libarary.enums.Status;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
 
 public abstract class Book {
     private int bookId;
-    private String author;
+    private Author author;
     private String name;
     private double price;
     private Status status;
     private int edition;
     private LocalDate dateOfPurchase;
-    private String owner;
+    private Reader owner;
 
-    public Book(int bookId, String author, String name, double price, Status status, int edition) {
+    public Book(int bookId, Author author, String name, double price, Status status, int edition){
         this.bookId = bookId;
         this.author = author;
         this.name = name;
         this.price = price;
         this.status = status;
         this.edition = edition;
+        Books.booksAll.add(this);
+    }
+
+    public Book(int bookId, Author author, String name, double price, Status status, int edition, LocalDate dateOfPurchase) {
+        this.bookId = bookId;
+        this.author = author;
+        this.name = name;
+        this.price = price;
+        this.status = status;
+        this.edition = edition;
+        this.dateOfPurchase = dateOfPurchase;
     }
 
     public int getBookId() {
@@ -31,11 +44,11 @@ public abstract class Book {
         this.bookId = bookId;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
@@ -78,10 +91,10 @@ public abstract class Book {
     public void setDateOfPurchase(LocalDate dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
     }
-    public String getOwner(){
+    public Reader getOwner(){
         return this.owner;
     }
-    public void changeOwner(String owner){
+    public void changeOwner(Reader owner){
         this.owner=owner;
     }
     public Book display(){
@@ -92,14 +105,12 @@ public abstract class Book {
     }
     @Override
     public String toString() {
-        return "Book{" +
-                "bookId=" + bookId +
-                ", author='" + author + '\'' +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", status=" + status +
-                ", edition=" + edition +
-                ", dateOfPurchase=" + dateOfPurchase +
-                '}';
+        return "bookId=" + bookId +'\n' +
+               "author=" + author.getName()+'\n' +
+                "name='" + name + '\n' +
+                "price=" + price +'\n' +
+                "status=" + status +'\n' +
+                "edition=" + edition +'\n' +
+                "dateOfPurchase=" + dateOfPurchase +'\n' +'\n';
     }
 }
