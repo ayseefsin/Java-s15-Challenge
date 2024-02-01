@@ -103,6 +103,24 @@ public abstract class Book {
     public void updateStatus(Status newStatus){
         this.status= newStatus;
     }
+
+    public static void addBook(Book book){
+        if(book.getClass().equals("Science")){
+            Science.scienceBooks.add(book);
+        }
+        if(book.getClass().equals("Romans")){
+            Romans.romansBooks.add(book);
+        }
+        if(book.getClass().equals("StudyBooks")){
+            StudyBooks.studyBooks.add(book);
+        }
+        if(book.getClass().equals("Magazines")){
+            Magazines.magazinesBooks.add(book);
+        }
+        if(book.getClass().equals("Journals")){
+            Journals.journalsBooks.add(book);
+        }
+    }
     @Override
     public String toString() {
         return "bookId=" + bookId +'\n' +

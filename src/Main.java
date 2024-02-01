@@ -24,7 +24,14 @@ public class Main {
         Reader aysin = new Reader("aysin", new ArrayList<>(), "Reader");
         crimeAndPunishment.setPrice(100);
         System.out.println("Crime and Punishment price updateeed" +crimeAndPunishment.display());
-
+        System.out.println(geometri.getClass());
+        Book.addBook(geometri);
+        System.out.println("science books: "+ Science.scienceBooks);
+        aysin.borrowBook(geometri);
+        aysin.purchaseBook(geometri);
+        aysin.purchaseBook(geometri);
+        aysin.borrowBook(geometri);
+        aysin.returnBook(geometri);
 
     }
 }
